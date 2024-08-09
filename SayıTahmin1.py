@@ -24,8 +24,8 @@ while not attempt == 0:
     answer = int(input("tahmininiz: "))
     if answer == x:
         print ("---")
-        print("tebrikler! cevap doğru")
-        print(f"puanınız: {int(score)} / 100")
+        print("Tebrikler! Tahmininiz doğru!")
+        print(f"Puanınız: {int(score)} / 100")
         break
     elif answer < x:
         score -= pointloss
