@@ -2,7 +2,7 @@ import random
 x = random.randint(1,100)
 score = 100
 
-print("Merhaba! Bu oyunda görevin rastgele belirlemiş 1 ila 100 arasındaki sayıyı tahmin etmek.")
+print("Merhaba! Bu oyunda görevin rastgele belirlenmiş 1 ila 100 arasındaki sayıyı tahmin etmek.")
 print("Sayıyı kaç tahminde bileceğini soracağız")
 print("ve her yanlış tahminde seni aşağı yada yukarı ile seni doğru sayıya yönlendireceğiz.")
 print("Toplam tahmin sayısı ile kullandığın tahmin sayısı puanını belirleyecek.")
