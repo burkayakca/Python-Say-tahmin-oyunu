@@ -6,6 +6,7 @@ print("Merhaba! Bu oyunda görevin rastgele belirlemiş 1 ila 100 arasındaki sa
 print("Sayıyı kaç tahminde bileceğini soracağız")
 print("ve her yanlış tahminde seni aşağı yada yukarı ile seni doğru sayıya yönlendireceğiz.")
 print("Toplam tahmin sayısı ile kullandığın tahmin sayısı puanını belirleyecek.")
+
 attempt = 0
 while attempt <= 0 or attempt > 20:
     attempt = int(input("Kaç tahminde bulunacaksın? "))
@@ -22,32 +23,32 @@ pointloss = 100/attempt
 while not attempt == 0:
     answer = int(input("tahmininiz: "))
     if answer == x:
+        print ("---")
         print("tebrikler! cevap doğru")
-        print ("***")
-        print(f"puanınız: {score} / 100")
+        print(f"puanınız: {int(score)} / 100")
         break
     elif answer < x:
         score -= pointloss
         attempt-= 1
         if score == 0 or attempt == 0:
-            print(f"Deneme hakkınız bitti. Kaybettiniz. Doğru cevap {x} idi")
+            print(f"Deneme hakkınız bitti. Kaybettiniz. Doğru cevap {x} idi.")
             break
         else:
             print ("---")
             print ("Yukarı")
-            print(f"kalan tahmin hakkınız: {attempt} puan: {score}")
+            print(f"kalan tahmin hakkınız: {attempt} puan: {int(score)}")
             print ("---")
         continue
     elif answer > x:
         score -= pointloss
         attempt-= 1
         if score == 0 or attempt == 0:
-            print(f"Kaybettiniz. Doğru cevap {x}.")
+            print(f"Deneme hakkınız bitti. Kaybettiniz. Doğru cevap {x} idi.")
             break
         else:
             print ("---")
             print ("Aşağı")
-            print(f"kalan hak: {attempt} puan: {score}")
+            print(f"kalan hak: {attempt} puan: {int(score)}")
             print ("---")
         continue
 
