@@ -2,10 +2,11 @@ import random
 x = random.randint(1,100)
 score = 100
 
-print("Merhaba! Bu oyunda görevin rastgele belirlenmiş 1 ila 100 arasındaki sayıyı tahmin etmek.")
-print("Sayıyı kaç tahminde bileceğini soracağız")
-print("ve her yanlış tahminde seni aşağı yada yukarı ile seni doğru sayıya yönlendireceğiz.")
-print("Toplam tahmin sayısı ile kullandığın tahmin sayısı puanını belirleyecek.")
+print('''
+Merhaba! Bu oyunda görevin rastgele belirlenmiş 1 ila 100 arasındaki sayıyı tahmin etmek.
+Sayıyı kaç tahminde bileceğini soracağız ve her yanlış tahminde seni aşağı yada yukarı ile seni doğru sayıya yönlendireceğiz.
+Toplam tahmin sayısı ile kullandığın tahmin sayısı puanını belirleyecek.
+''')
 
 attempt = 0
 while attempt <= 0 or attempt > 20:
@@ -34,10 +35,10 @@ while not attempt == 0:
             print(f"Deneme hakkınız bitti. Kaybettiniz. Doğru cevap {x} idi.")
             break
         else:
-            print ("---")
-            print ("Yukarı")
-            print(f"kalan tahmin hakkınız: {attempt} puan: {int(score)}")
-            print ("---")
+            print (f'''---
+                    Yukarı
+                    kalan tahmin hakkınız: {attempt} puan: {int(score)}
+                    ---''')
         continue
     elif answer > x:
         score -= pointloss
@@ -46,10 +47,10 @@ while not attempt == 0:
             print(f"Deneme hakkınız bitti. Kaybettiniz. Doğru cevap {x} idi.")
             break
         else:
-            print ("---")
-            print ("Aşağı")
-            print(f"kalan hak: {attempt} puan: {int(score)}")
-            print ("---")
+            print (f'''---
+            Aşağı
+            kalan hak: {attempt} puan: {int(score)}
+            ---''')
         continue
 
 print(input("Çıkmak için bir tuşa basınız."))
