@@ -3,10 +3,10 @@ x = random.randint(1,100)
 score = 100
 
 print('''
-Merhaba! Bu oyunda görevin rastgele belirlenmiş 1 ila 100 arasındaki sayıyı tahmin etmek.
-Sayıyı kaç tahminde bileceğini soracağız ve her yanlış tahminde seni aşağı yada yukarı ile seni doğru sayıya yönlendireceğiz.
-Toplam tahmin sayısı ile kullandığın tahmin sayısı puanını belirleyecek.
-''')
+        Merhaba! Bu oyunda görevin rastgele belirlenmiş 1 ila 100 arasındaki sayıyı tahmin etmek.
+        Sayıyı kaç tahminde bileceğini soracağız ve her yanlış tahminde seni aşağı yada yukarı ile seni doğru sayıya yönlendireceğiz.
+        Toplam tahmin sayısı ile kullandığın tahmin sayısı puanını belirleyecek.
+        ''')
 
 attempt = 0
 while attempt <= 0 or attempt > 20:
@@ -36,9 +36,9 @@ while not attempt == 0:
             break
         else:
             print (f'''---
-                    Yukarı
-                    kalan tahmin hakkınız: {attempt} puan: {int(score)}
-                    ---''')
+            Yukarı
+            kalan tahmin hakkınız: {attempt} puan: {int(score)}
+            ---''')
         continue
     elif answer > x:
         score -= pointloss
